@@ -20,5 +20,5 @@ RUN set -eux; \
 	rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /app/build/target/spring-boot*.jar /app/app.jar
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app/app.jar"]
